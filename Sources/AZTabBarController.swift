@@ -126,10 +126,6 @@ public class AZTabBarController: UIViewController {
     }
   }
   
-  public var currentViewController: UIViewController {
-    return controllers[selectedIndex]!
-  }
-  
   /// Should the tab bar have animated transitions enabled?
   open var animateTabChange: Bool = false
   
