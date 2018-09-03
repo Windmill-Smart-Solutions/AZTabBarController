@@ -99,20 +99,20 @@ class ViewController: UIViewController {
         tabController.setBadgeText("!", atIndex: 4)
         
         tabController.setIndex(10, animated: true)
-        
-        tabController.setAction(atIndex: 3){
-            self.counter = 0
-            self.tabController.setBadgeText(nil, atIndex: 3)
-        }
-        
-        tabController.setAction(atIndex: 2) {
-            self.tabController.onlyShowTextForSelectedButtons = !self.tabController.onlyShowTextForSelectedButtons
-        }
-        
-        tabController.setAction(atIndex: 4) {
-            //self.tabController.setBar(hidden: true, animated: true)
-        }
-        
+      
+      tabController.setAction(atIndex: 3) { _ in
+        self.counter = 0
+        self.tabController.setBadgeText(nil, atIndex: 3)
+      }
+      
+      tabController.setAction(atIndex: 2) { _ in
+        self.tabController.onlyShowTextForSelectedButtons = !self.tabController.onlyShowTextForSelectedButtons
+      }
+      
+      tabController.setAction(atIndex: 4) { _ in
+        //self.tabController.setBar(hidden: true, animated: true)
+      }
+      
         tabController.setIndex(1, animated: true)
         
         tabController.animateTabChange = false

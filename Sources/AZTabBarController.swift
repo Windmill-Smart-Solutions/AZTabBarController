@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import EasyNotificationBadge
 
-public typealias AZTabBarAction = (() -> Void)
+public typealias AZTabBarAction = ((UIButton) -> Void)
 
 public class AZTabBarController: UIViewController {
   
@@ -503,7 +503,7 @@ public class AZTabBarController: UIViewController {
     
     if self.selectedIndex != index { moveToController(at: index, animated: animated) }
     
-    if let action = actions[index] { action() }
+    if let action = actions[index] { action(buttons[index]) }
   }
   
   
